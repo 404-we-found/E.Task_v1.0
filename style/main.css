@@ -1,0 +1,246 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#root{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;;
+    flex-direction: row;
+    min-width: 1000px;
+    box-sizing: border-box;
+}
+
+
+/* 三栏结构样式 */
+.switcher{
+    height: 100%;
+    width: 7%;
+    box-sizing: border-box;
+    background-color: #282c34;
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar{
+    height: 100%;
+    width: 20%;
+    box-sizing: border-box;
+    position: relative;
+    /* background-color: red; */
+}
+
+.main{
+    height: 100%;
+    width: 73%;
+    box-sizing: border-box;
+    /* background-color: #f8f8f8; */
+    position: relative;
+}
+
+
+/* 三栏内容样式 */
+
+/* 1-0、用户侧边栏  @switcher*/
+
+/* 1-1 用户侧边栏顶部样式 */
+.switcher-header{
+    position: relative;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switcher-header-logoImg{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+/* 1-2 用户侧边栏主要部分样式 */
+.switcher-main{
+    margin-top: 30%;
+    height: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #282c34;
+}
+
+.switcher-main-item{
+    position: relative;
+    height: 20%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.switcher-main-item-icon{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: #61dafb;
+    transition: all .7s ease;
+
+}
+
+.switcher-main-item-font{
+    position: absolute;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    height: 100%;
+    width: 100%;
+    transform: translate(0,50%);
+    color: #61dafb;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: all .7s ease;
+
+}
+
+.switcher-main-item:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+.switcher-main-item:hover > .switcher-main-item-icon{
+    transform: translate(0,-30%);
+    opacity: 0;
+}
+
+.switcher-main-item:hover > .switcher-main-item-font{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+/* 1-3 用户侧边栏底部样式 */
+
+
+
+/* 2-0 功能侧边栏 @sidebar */
+
+
+#sidebar_loading{
+    position: absolute;
+    left: 0px;right: 0px;top: 0px;bottom: 0px;
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    z-index: 10;
+}
+
+.cube1, .cube2 {
+    background-color: #4fc08d;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+     
+    -webkit-animation: cubemove 1.8s infinite ease-in-out;
+    animation: cubemove 1.8s infinite ease-in-out;
+  }
+   
+  .cube2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+    background-color: #61dafb !important;
+  }
+   
+  @-webkit-keyframes cubemove {
+    25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+    50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+    75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+    100% { -webkit-transform: rotate(-360deg) }
+  }
+   
+  @keyframes cubemove {
+    25% {
+      transform: translateX(42px) rotate(-90deg) scale(0.5);
+      -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    } 50% {
+      transform: translateX(42px) translateY(42px) rotate(-179deg);
+      -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+    } 50.1% {
+      transform: translateX(42px) translateY(42px) rotate(-180deg);
+      -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    } 75% {
+      transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+      -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    } 100% {
+      transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg);
+    }
+}
+
+/* 2-1 功能侧边栏顶部样式 */
+.sidebar-header{
+    position: relative;
+    height: 7%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: #4fc08d;
+    color: white;
+    box-shadow: 0px 1px 2px #ccc;
+}
+
+.search-icon{
+    color: white !important;
+}
+
+.cancel-icon{
+    color: white !important;
+}
+
+.task-search{
+    border-bottom: 1px solid white !important;
+    box-shadow: 0px 0px 0px !important;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* 3-0 功能显示栏 @main*/
+/* 3-1 初始化欢迎页面 */
+.main-welcome{
+    position: relative;
+    background-color: #f8f8f8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-welcome-text{
+    color: grey;
+    opacity: .7;
+}
+
+.main-welcome-text h1,.main-welcome-text h3{
+    text-align: center;
+}

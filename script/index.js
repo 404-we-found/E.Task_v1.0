@@ -106,7 +106,7 @@ var username,
         .then(function( res ){
             console.log(res.data)
             if(res.data === true) {
-                window.location.href="http://www.4399.com/"
+                window.location.href="/src/main.html"
             }
         })
     })
