@@ -6,6 +6,8 @@
 html,body{
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 #root{
@@ -15,7 +17,7 @@ html,body{
     /* background-color: black; */
     display: flex;;
     flex-direction: row;
-    min-width: 1000px;
+    min-width: 1200px;
     box-sizing: border-box;
 }
 
@@ -35,6 +37,8 @@ html,body{
     width: 20%;
     box-sizing: border-box;
     position: relative;
+    box-shadow: 2px 0 3px grey;
+    z-index: 1;
     /* background-color: red; */
 }
 
@@ -225,6 +229,9 @@ html,body{
 
 
 /* 3-0 功能显示栏 @main*/
+
+
+
 /* 3-1 初始化欢迎页面 */
 .main-welcome{
     position: relative;
@@ -244,3 +251,185 @@ html,body{
 .main-welcome-text h1,.main-welcome-text h3{
     text-align: center;
 }
+
+/* 3-2 任务功能的具体展示 @main-task*/
+
+.main-task{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3-2-1 任务创建版 @main-task-create */
+.main-task-create{
+    position: relative;
+    height: 80%;
+    width: 50%;
+    background-color: #f2f6fa;
+    /* border: .5px solid grey; */
+    box-shadow: 0 14px 20px 0 rgba(200,200,200,.8);
+    /* border-radius: 5px; */
+    transform: translate(0,30%);
+    opacity: 0;
+    transition: all .7s ease;
+    padding-top: 40px;
+    box-sizing: border-box;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+/* 任务创建板动效 */
+.main-task-create-show{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.main-task-create-name{
+    position: relative;
+    height: 10%;
+    width: 80%;
+    border:1px solid #e6e8eb;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.main-task-create-name h2{
+    position: absolute;
+    top: -40px;
+    color: #364962;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.main-task-create-name #taskName{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    outline: none;
+    background-color: #f2f6fa;
+    border: none;
+    color: #a9a9a9;
+    transition: all .5s ease;
+    letter-spacing: .7px;
+}
+
+.main-task-create-name #taskName::placeholder{
+    color: #a9a9a9;
+}
+
+.main-task-create-name #taskName:focus{
+    background-color: white;
+}
+
+.main-task-create-mark{
+    width: 80%;
+}
+
+#taskMark{
+    height: 60px;
+    width: 100%;
+    position: relative;
+    border: 1px solid #e6e8eb;
+    font-size: 14px;
+    color: #a9a9a9;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    overflow: hidden;
+    transition: all .7s ease;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+#taskMark:focus{
+    background-color: white;
+}
+
+.main-task-create-time {
+    width:80%;
+    position: relative;
+}
+
+.main-task-creat-title{
+    color: #364962;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 15px;
+
+}
+
+.main-task-create-time input {
+    padding: 5px 15px;
+    box-sizing: border-box;
+    width: 40%;
+    height: 40%;
+}
+
+.main-task-create-time label{
+    color: #364962;
+    font-size: 20px;
+    text-shadow: 0px 2px 2px rgba(200, 200, 200, .8);
+}
+
+
+
+
+
+
+
+
+
+.main-task-create-btn{
+    height: 8%;
+    width: 25%;
+    background-color: #f2f6fa;
+    color: #364962;
+    margin-top:40px;
+    font-weight: 100;
+    font-size: 20px;
+    border:1px solid #e6e8eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .7s ease;
+    
+}
+.main-task-create-btn:hover{
+    transform: translate(0,-5%);
+    background-color: white;
+    box-shadow: 0 10px 15px 0 rgba(200,200,200,.8);
+
+}
+
+
+.main-task-create-btn:active{
+    animation: jelly .5s;
+}
+
+@keyframes jelly {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    25%,
+    75% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+}
+
