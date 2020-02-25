@@ -32,7 +32,7 @@ var createTask = () => {
     });
 
     $(".main-task-create-btn").click(()=>{
-        axios.post();
+        axios.post("/",(e)=>console.log(e));
     })
 }
 
