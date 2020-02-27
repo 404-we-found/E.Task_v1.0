@@ -33,7 +33,7 @@ var createTask = () => {
 
     $(".main-task-create-btn").click(()=>{
         axios.post();
-    })
+        })
 }
 
 export default createTask;

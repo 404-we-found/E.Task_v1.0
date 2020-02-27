@@ -104,10 +104,14 @@ var username,
             "password": loginPassword
         })
         .then(function( res ){
+            localStorage.
             console.log(res.data)
             if(res.data === true) {
                 window.location.href="/src/main.html"
             }
+        })
+        .catch(() => {
+            console.log("服务器错误!")
         })
     })
 })(window, document);
