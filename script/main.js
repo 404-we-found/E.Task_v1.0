@@ -28,6 +28,7 @@ window.onload = function(){
         },1000)
     } )
     .catch(()=>{
+        //服务器报错提示
         console.log("服务器错误！")
     });
 }
