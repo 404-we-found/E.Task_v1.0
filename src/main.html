@@ -21,15 +21,15 @@
 
             <!-- 用户侧边栏主要部分，用于进行功能页内容切换控制 -->
             <div class="switcher-main">
-                <div class="switcher-main-item">
+                <div class="switcher-main-item item-task">
                     <div class="switcher-main-item-icon"><i class="mdui-icon material-icons">&#xe39f;</i></div>
                     <div class="switcher-main-item-font"><span>任务</span></div>
                 </div>
-                <div class="switcher-main-item">
+                <div class="switcher-main-item item-point">
                     <div class="switcher-main-item-icon"><i class="mdui-icon material-icons">&#xe8d3;</i></div>
                     <div class="switcher-main-item-font"><span>协作者</span></div>
                 </div>
-                <div class="switcher-main-item">
+                <div class="switcher-main-item item-list">
                     <div class="switcher-main-item-icon"><i class="mdui-icon material-icons">&#xe03b;</i></div>
                     <div class="switcher-main-item-font"><span>个人清单</span></div>
                 </div>
@@ -44,7 +44,7 @@
 
         <!-- 功能侧边栏 -->
         <div class="sidebar">
-           <div class="sidebar-task">
+           <div class="sidebar-box sidebar-task">
                 <!-- 功能侧边栏 loading -->
                 <div id="sidebar_loading">
                     <div class="cube1"></div>
@@ -52,7 +52,7 @@
                 </div>
 
                 <!-- 顶部，任务搜索与任务创建按钮存放处 -->
-                <div class="sidebar-header">
+                <div class="sidebar-task-header">
                     <button class="mdui-btn mdui-btn-icon mdui-ripple" id="creatTaskBtn"><i class="mdui-icon material-icons">add</i></button>
                     <div class="mdui-textfield mdui-textfield-expandable mdui-float-right">     
                         <button class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons search-icon">search</i></button>
@@ -65,6 +65,14 @@
                 <!-- <div class="sidebar-task-item"></div> -->
            </div>
 
+           <!-- 任务点 -->
+           <div class="sidebar-box sidebar-point">
+                <!-- 任务点列表 - 单个渲染模板 -->
+                <!-- <div class="sidebar-point-item"></div> -->
+           </div>
+
+           <!-- 备忘录 -->
+           <div class="sidebar-box sidebar-list"></div>
         </div>
 
 
@@ -98,6 +106,18 @@
                         <input type="date" id="task_end_time"> 
                     </div>
                     <div class="main-task-create-btn"><span>创建任务</span></div>
+                </div>
+            </div>
+
+            <!-- 任务节点展示 -->
+            <div class="main-point">
+                <div class="main-point-box">
+                    <div class="point-left"></div>
+                    <div class="point-right"></div>
+                    <div class="point-left"></div>
+                    <div class="point-left"></div>
+                    <div class="point-left"></div>
+
                 </div>
             </div>
         </div>

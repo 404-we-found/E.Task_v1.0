@@ -1,10 +1,14 @@
+import pointPageCreate from '../pointModule/pointPageCreate.js'
+
 var taskName,
     taskMark,
     taskBeginTime,
     taskEndTime;
 
 var createTask = () => {
+    
     $("#creatTaskBtn").click(() => {
+        $(".main-welcome").hide();
         $(".main-task-create").addClass("main-task-create-show")
     });
 
@@ -33,7 +37,9 @@ var createTask = () => {
 
     $(".main-task-create-btn").click(()=>{
         // axios.post();
-    })
+    });
+
+    pointPageCreate();
 }
 
 export default createTask;

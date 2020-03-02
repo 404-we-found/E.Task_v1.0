@@ -1,11 +1,13 @@
 import createTask from './taskModule/createtask.js'
 import getTaskList from './taskModule/getTaskList.js'
+import changeButton from './taskModule/changeButton.js'
+import pointPageCreate from './pointModule/pointPageCreate.js'
 
-let welStatus = 1;
 
-if(welStatus) {
-    $(".main-welcome").hide();
-}
+let pointAxios = 0, // 任务节点侧边栏是否请求渲染
+    listAxios = 0; //  个人备忘录侧边栏是否请求渲染
+
+
 
 
 var taskNums = 0,  // 获取任务个数
@@ -33,4 +35,16 @@ window.onload = function(){
     });
 }
 
+
+// 创建任务模块
 createTask();
+
+
+// 功能侧边栏渲染转化模块
+changeButton();
+
+
+// 单个任务的任务节点渲染
+pointPageCreate(document);
+
+
